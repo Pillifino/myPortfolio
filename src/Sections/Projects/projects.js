@@ -8,7 +8,7 @@ function Projects() {
       <Flex
         bg="black"
         w="100vw"
-        height="90vh"
+        height={["120vh","120vh","90vh","90vh",]}
         justify="center"
         alignItems="center"
       >
@@ -19,7 +19,7 @@ function Projects() {
           flexWrap="wrap"
           justifyContent="space-between"
           alignItems="center"
-          height="60%"
+          height={["100%","100%","80%","80%",]}
           maxWidth="80%"
           position="relative"
         >
@@ -27,12 +27,12 @@ function Projects() {
             return (
               <Image 
               src={image}
-              w="45%"
-              h="45%"
+              w={["100%","100%","50%","50%",]}
+              h={["25%","25%","45%","45%",]}
+              p="2"
               borderRadius="25px"
               filter='auto' 
-              blur='2px'
-              opacity=".8"
+              opacity=".6"
               _hover={{ blur: "0px", opacity:"1"}}
               transition=".8s"
               >
