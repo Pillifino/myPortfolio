@@ -1,13 +1,13 @@
 
 import { useRef } from 'react'
 
-import { Flex, Text } from '@chakra-ui/react'
+import { Flex, Text, CircularProgress, CircularProgressLabel } from '@chakra-ui/react'
 import { useInView } from "framer-motion"
 
 
 function SkillCard() {
   const ref = useRef(null)
-  const isInView = useInView(ref,{ once: true })
+  const isInView = useInView(ref, { once: true })
   return (
     <div>
       <Flex ref={ref}
@@ -37,7 +37,68 @@ function SkillCard() {
           fontSize="2xl">
           Skills
         </Text>
-        {/* Carousel here */}
+        <Flex
+          // bg="white"
+          w="100%"
+          h="60%"
+          justify="space-evenly"
+          align="center"
+        >
+          <Flex
+          // bg="green"
+          flexDirection="column"
+          h="100%"
+          justify="space-evenly"
+          >
+            <CircularProgress size="90px" value={90} color='blue.300'>
+              <CircularProgressLabel>90%</CircularProgressLabel>
+            </CircularProgress>
+            <Text
+            // bg="blue"
+            h="100%"
+            justify="center"
+            align="center"
+            >
+              Front End
+            </Text>
+          </Flex>
+          <Flex
+          // bg="green"
+          flexDirection="column"
+          h="100%"
+          justify="space-evenly"
+          >
+            <CircularProgress size="90px" value={75} color='blue.300'>
+              <CircularProgressLabel>75%</CircularProgressLabel>
+            </CircularProgress>
+            <Text
+            // bg="blue"
+            h="100%"
+            justify="center"
+            align="center"
+            >
+              Back End
+            </Text>
+          </Flex>
+          <Flex
+          // bg="green"
+          flexDirection="column"
+          h="100%"
+          justify="space-evenly"
+          >
+            <CircularProgress size="90px" value={95} color='blue.300'>
+              <CircularProgressLabel>95%</CircularProgressLabel>
+            </CircularProgress>
+            <Text
+            // bg="blue"
+            h="100%"
+            justify="center"
+            align="center"
+            >
+              UX/UI
+            </Text>
+          </Flex>
+        </Flex>
       </Flex>
     </div>
   )
