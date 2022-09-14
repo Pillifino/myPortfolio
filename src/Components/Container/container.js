@@ -19,7 +19,7 @@ function Container() {
       <section id="home"><Home /></section>
       <Flex
         bg="bg"
-        height="300vh"
+        height={["350vh","330vh","300vh","300vh",]}
         w="100vw"
         justify="center"
       >
