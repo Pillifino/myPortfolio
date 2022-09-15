@@ -1,6 +1,32 @@
-import { Container, Flex, Image } from '@chakra-ui/react'
+import { Container, Flex, Image, Link } from '@chakra-ui/react'
 
-import images from '../../images'
+import image1 from '../../Assets/Images/collabarray.jpg'
+import image2 from '../../Assets/Images/eshop.jpg'
+import image3 from '../../Assets/Images/noteTaker.jpg'
+import image4 from '../../Assets/Images/teamProfile.jpg'
+
+const projects = [
+  {
+    number: 1,
+    image: image1,
+    link: "https://collabarray.herokuapp.com/Search"
+  },
+  {
+    number: 2,
+    image: image2,
+    link: "https://www.youtube.com/watch?v=R5NlXv3OmSA"
+  },
+  {
+    number: 3,
+    image: image3,
+    link: "https://agile-cliffs-17930.herokuapp.com/"
+  },
+  {
+    number: 4,
+    image: image4,
+    link: "https://user-images.githubusercontent.com/98142990/166129984-c6f92dad-c0b2-46bf-b372-23791c157c23.mp4"
+  },
+]
 
 function Projects() {
   return (
@@ -19,16 +45,22 @@ function Projects() {
           flexWrap="wrap"
           justifyContent="space-between"
           alignItems="center"
-          height={["100%","100%","80%","80%",]}
+          height={["100%","100%","100%","100%",]}
           maxWidth="80%"
           position="relative"
         >
-          {images.map((image)=> {
+          {projects.map((item, index)=> {
             return (
-              <Image 
-              src={image}
+              <Link href={item.link}
+              // bg="red"
+              // border="solid white 1px"
               w={["100%","100%","50%","50%",]}
-              h={["25%","25%","45%","45%",]}
+              >
+              <Image 
+              key={index}
+              src={item.image}
+              w="100%"
+              h={["30vh","30vh","45vh","45vh",]}
               p="2"
               borderRadius="25px"
               filter='auto' 
@@ -37,6 +69,7 @@ function Projects() {
               transition=".8s"
               >
               </Image>
+              </Link>
             );
           })}
         </Container>
