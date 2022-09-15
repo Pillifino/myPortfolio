@@ -51,7 +51,7 @@ function Projects() {
         >
           {projects.map((item, index)=> {
             return (
-              <Link href={item.link}
+              <Link href={item.link} target={"_blank"}
               // bg="red"
               // border="solid white 1px"
               w={["100%","100%","50%","50%",]}
