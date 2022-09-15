@@ -18,8 +18,8 @@ function Container() {
     <>
       <section id="home"><Home /></section>
       <Flex
-        bg="bg"
-        height={["350vh","330vh","300vh","300vh",]}
+        bg="black"
+        height={["350vh","350vh","300vh","300vh",]}
         w="100vw"
         justify="center"
       >

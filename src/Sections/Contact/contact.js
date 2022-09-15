@@ -67,7 +67,7 @@ function Contact() {
             />
             <Input
               color="white"
-              placeholder="Last Name"
+              placeholder="Email"
               type='email'
               bg="black"
               opacity=".5"
