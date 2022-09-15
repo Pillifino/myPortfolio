@@ -16,26 +16,27 @@ import { Flex } from "@chakra-ui/react";
 function Container() {
   return (
     <>
-      <section id="home"><Home /></section>
-      <Flex
-        bg="black"
-        height={["350vh","350vh","300vh","300vh",]}
-        w="100vw"
-        justify="center"
-      >
+        <section id="home"><Home /></section>
         <Flex
-          // bg="red"
-          width="100vw"
-          justify="flex-start"
-          alignItems="center"
-          flexDirection="column"
+          bg="black"
+          height={["350vh", "350vh", "300vh", "300vh",]}
+          w="100vw"
+          justify="center"
         >
+          <Flex
+            // bg="red"
+            width="100vw"
+            justify="flex-start"
+            alignItems="center"
+            flexDirection="column"
+          >
             <section id="skills"><Skills /></section>
             <div id="projects"><Projects /></div>
             <div id="contact"><Contact /></div>
-          <Footer />
+            {/* <div id="contact"><HookForm /></div> */}
+            <Footer />
+          </Flex>
         </Flex>
-      </Flex>
     </>
   );
 }

@@ -1,8 +1,12 @@
 
 // import ContactBackground from "../../Assets/Images/contact.jpg"
 
-import { Flex, Image, FormControl, Input, Text } from "@chakra-ui/react"
+import { Flex, Image, Text, Box } from "@chakra-ui/react"
 import RateCard from '../../Components/Ratecard/rateCard'
+
+// Hook Form
+import HookForm from "../../Components/HookForm/hookForm"
+
 
 function Contact() {
   return (
@@ -36,64 +40,24 @@ function Contact() {
         >
           <Text
             // bg="blue"
+            h="10%"
             w="100%"
             fontSize="4xl"
             color="white"
           >
             Contact Me
           </Text>
-          {/* Form */}
-          <FormControl
+          <Flex
             // bg="red"
-            h="60%"
+            flexWrap="wrap"
+            w="80vw"
+            h="100%"
+            justify="center"
+            alignItems="center"
+            align="center"
           >
-            <Input
-              color="white"
-              placeholder="First Name"
-              bg="black"
-              opacity=".5"
-              w="50%"
-              h="20%"
-              borderRadius="20px"
-            />
-            <Input
-              color="white"
-              placeholder="Last Name"
-              bg="black"
-              opacity=".5"
-              w="50%"
-              h="20%"
-              borderRadius="20px"
-            />
-            <Input
-              color="white"
-              placeholder="Email"
-              type='email'
-              bg="black"
-              opacity=".5"
-              w="50%"
-              h="20%"
-              borderRadius="20px"
-            />
-            <Input
-              color="white"
-              placeholder="Phone Number"
-              bg="black"
-              opacity=".5"
-              w="50%"
-              h="20%"
-              borderRadius="20px"
-            />
-            <Input
-              color="white"
-              placeholder="Message"
-              bg="black"
-              opacity=".5"
-              w="100%"
-              h="60%"
-              borderRadius="20px"
-            />
-          </FormControl>
+            <HookForm />
+          </Flex>
           <RateCard />
         </Flex>
       </Flex>
