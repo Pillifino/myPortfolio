@@ -40,67 +40,24 @@ function Contact() {
         >
           <Text
             // bg="blue"
+            h="10%"
             w="100%"
             fontSize="4xl"
             color="white"
           >
             Contact Me
           </Text>
-          {/* Form */}
-          {/* <FormControl
+          <Flex
             // bg="red"
-            h="60%"
+            flexWrap="wrap"
+            w="80vw"
+            h="100%"
+            justify="center"
+            alignItems="center"
+            align="center"
           >
-            <Input
-              color="white"
-              placeholder="First Name"
-              bg="black"
-              opacity=".5"
-              w="50%"
-              h="20%"
-              borderRadius="20px"
-            />
-            <Input
-              color="white"
-              placeholder="Last Name"
-              bg="black"
-              opacity=".5"
-              w="50%"
-              h="20%"
-              borderRadius="20px"
-            />
-            <Input
-              color="white"
-              placeholder="Email"
-              type='email'
-              bg="black"
-              opacity=".5"
-              w="50%"
-              h="20%"
-              borderRadius="20px"
-            />
-            <Input
-              color="white"
-              placeholder="Phone Number"
-              bg="black"
-              opacity=".5"
-              w="50%"
-              h="20%"
-              borderRadius="20px"
-            />
-            <Input
-              color="white"
-              placeholder="Message"
-              bg="black"
-              opacity=".5"
-              w="100%"
-              h="60%"
-              borderRadius="20px"
-            />
-          </FormControl> */}
-          <Box p>
             <HookForm />
-          </Box>
+          </Flex>
           <RateCard />
         </Flex>
       </Flex>
