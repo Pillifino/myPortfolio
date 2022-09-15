@@ -1,7 +1,8 @@
+import React from 'react'
 
 import { useRef } from 'react'
 
-import { Flex, Text, Button, Spacer } from '@chakra-ui/react'
+import { Flex, Text, Button, Spacer, ModalContent, Modal, ModalOverlay, ModalCloseButton, useDisclosure, ModalHeader } from '@chakra-ui/react'
 
 import { AiFillLike, AiOutlineLike } from 'react-icons/ai'
 
@@ -9,8 +10,18 @@ import { useInView } from "framer-motion"
 
 
 function RateCard() {
+  // Modal
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [size, setSize] = React.useState('md')
+
+  const handleSizeClick = (newSize) => {
+    setSize(newSize)
+    onOpen()
+  }
+
+  // In View
   const ref = useRef(null)
-  const isInView = useInView(ref,{ once: true })
+  const isInView = useInView(ref, { once: true })
   return (
     <div>
       <Flex
@@ -54,7 +65,7 @@ function RateCard() {
           <Spacer />
           <Spacer />
           <Button
-            // colorScheme='dark'
+            onClick={() => handleSizeClick("xl")}
             bg="white"
             w="30%"
             h="60%"
@@ -63,13 +74,33 @@ function RateCard() {
           >
             <AiFillLike size="2em" />
           </Button>
+          {/* Modal */}
+          <Modal isOpen={isOpen} size="xl" onClose={onClose}>
+            <ModalOverlay />
+            <ModalContent>
+              <ModalHeader
+                alignSelf="center"
+              > I knew you'd say that!</ModalHeader>
+              <ModalCloseButton />
+            </ModalContent>
+          </Modal>
           <Spacer />
           <Button
-            // colorScheme='blue'
+            onClick={() => handleSizeClick("xl")}
             bg="bgAccent"
             w="30%"
             h="60%"
           >
+            {/* Modal */}
+            <Modal isOpen={isOpen} size="xl" onClose={onClose}>
+              <ModalOverlay />
+              <ModalContent>
+                <ModalHeader
+                  alignSelf="center"
+                > I knew you'd say that!</ModalHeader>
+                <ModalCloseButton />
+              </ModalContent>
+            </Modal>
             <AiOutlineLike size="2em" />
           </Button>
           <Spacer />
