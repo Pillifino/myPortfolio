@@ -1,8 +1,12 @@
 
 // import ContactBackground from "../../Assets/Images/contact.jpg"
 
-import { Flex, Image, FormControl, Input, Text } from "@chakra-ui/react"
+import { Flex, Image, Text, Box } from "@chakra-ui/react"
 import RateCard from '../../Components/Ratecard/rateCard'
+
+// Hook Form
+import HookForm from "../../Components/HookForm/hookForm"
+
 
 function Contact() {
   return (
@@ -43,7 +47,7 @@ function Contact() {
             Contact Me
           </Text>
           {/* Form */}
-          <FormControl
+          {/* <FormControl
             // bg="red"
             h="60%"
           >
@@ -93,7 +97,10 @@ function Contact() {
               h="60%"
               borderRadius="20px"
             />
-          </FormControl>
+          </FormControl> */}
+          <Box p>
+            <HookForm />
+          </Box>
           <RateCard />
         </Flex>
       </Flex>
