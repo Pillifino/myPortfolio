@@ -1,4 +1,4 @@
-import { Flex, Heading, Spacer, Text, Icon, IconButton, Link } from '@chakra-ui/react'
+import { Flex, Heading, Spacer, Text, Icon, IconButton, Link, color } from '@chakra-ui/react'
 
 // Icons stuff
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
@@ -46,7 +46,7 @@ function Nav() {
             fontSize="md"
             color="white"
           >
-            <Link href='#home' style={{ textDecoration: "none" }}>
+            <Link href='#home' style={{ textDecoration: "none" }} _hover={{fontSize:"1.3em"}} transition=".5s">
               Home
             </Link>
           </Text>
@@ -55,7 +55,7 @@ function Nav() {
             fontSize="md"
             color="white"
           >
-            <Link href='#skills' style={{ textDecoration: "none" }}>
+            <Link href='#skills' style={{ textDecoration: "none" }} _hover={{fontSize:"1.3em"}} transition=".5s">
               Skills
             </Link>
           </Text>
@@ -64,7 +64,7 @@ function Nav() {
             fontSize="md"
             color="white"
           >
-            <Link href='#projects' style={{ textDecoration: "none" }}>
+            <Link href='#projects' style={{ textDecoration: "none" }} _hover={{fontSize:"1.3em"}} transition=".5s">
               Projects
             </Link>
           </Text>
@@ -90,21 +90,19 @@ function Nav() {
             <Icon as={FaTwitter} boxSize="1.5em" transform={{ boxSize: "6em" }} color="White" _hover={{ boxSize: "1.8em" }} transition=".3s" />
           </Link>
           <Spacer />
-          <Flex
+          <Link
+            href='#contact'
             border="solid white 1px"
             h="75%"
-            w="35%"
-            alignItems="center"
-            justify="center"
+            w="50%"
+            pt="1.5vh"
+            textAlign="center"
+            _hover={{bg:"white", color:"black"}} 
+            transition=".5s"
+            color="white"
           >
-            <Text
-              color="white"
-            >
-              <Link href='#contact' style={{ textDecoration: "none" }}>
-                Let's Connect
-              </Link>
-            </Text>
-          </Flex>
+            Let's Connect
+          </Link>
         </Flex>
       </Flex>
       {/* Mobile */}
