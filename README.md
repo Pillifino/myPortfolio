@@ -1,7 +1,8 @@
 # MyPortfolio
 
 ## Description
-Created using Chakra ui & React
+**Framework:** React.js
+**Styling:** Chakra Ui
 
 ## Showcase
 
