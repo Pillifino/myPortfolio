@@ -13,7 +13,7 @@ https://user-images.githubusercontent.com/98142990/191045995-9859fd6e-414b-42af-
 
 ## How to run the project
 ### Viewing
-- Check it out here! https://my-portfolio-beige-seven.vercel.app/
+Check it out here! https://my-portfolio-beige-seven.vercel.app/
 ### Running locally
 Clone The Repository
 
