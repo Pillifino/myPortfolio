@@ -11,7 +11,7 @@ function Skills() {
       <Flex
         // bg="green"
         width="100vw"
-        height="50vh"
+        height={["40vh","50vh","50vh","50vh",]}
         justify="center"
       >
           <SkillCard />
