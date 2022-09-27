@@ -19,8 +19,8 @@ function SkillCard() {
         position="relative"
         bottom="20vh"
         zIndex="99"
-        h="50vh"
-        w={["85vw","80vw","80vw","80vw",]}
+        h="100%"
+        w="80vw"
         boxShadow='lg'
         borderRadius="40px"
         color="white"
