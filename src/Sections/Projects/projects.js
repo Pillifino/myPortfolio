@@ -60,7 +60,7 @@ function Projects() {
               key={index}
               src={item.image}
               w="100%"
-              h={["30vh","30vh","45vh","45vh",]}
+              h={["25vh","30vh","45vh","45vh",]}
               p="2"
               borderRadius="25px"
               filter='auto' 
